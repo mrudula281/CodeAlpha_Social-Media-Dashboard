@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Social Media Dashboard</h1>
+        <div class="auth-buttons">
+            <button onclick="connectAccount('twitter')">Connect Twitter</button>
+            <button onclick="connectAccount('facebook')">Connect Facebook</button>
+            <button onclick="connectAccount('instagram')">Connect Instagram</button>
+            <button onclick="connectAccount('linkedin')">Connect LinkedIn</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="feeds">
+            <!-- Feeds will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Modal for OAuth Authentication -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Authenticate</h2>
+            <p id="auth-message"></p>
+            <button id="auth-confirm-button">Confirm</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
